@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Помощь | От своих</title>
+
+    <!-- Подключение шрифта Onest -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Подключение Lucide Icons -->
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+
+    <!-- Подключение JavaScript -->
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ==============================
+     HEADER — ШАПКА САЙТА
+============================== -->
+
+<header class="header">
+
+    <div class="header-container">
+
+        <!-- Логотип -->
+        <a href="index.html" class="logo">
+
+            <i data-lucide="sprout"></i>
+
+            <span>от своих</span>
+
+        </a>
+
+
+        <!-- Навигация -->
+        <nav class="navigation">
+
+    <a href="catalog.html">Каталог</a>
+
+    <a href="about.html">О сервисе</a>
+
+    <a href="farms.html">Наши фермы</a>
+
+    <a href="help.html">Помощь</a>
+
+</nav>
+
+
+        <!-- Иконки -->
+        <div class="header-icons">
+
+            <a href="#" class="header-icon search-toggle" aria-label="Поиск">
+                <i data-lucide="search"></i>
+            </a>
+
+            <a href="favorites.html" class="header-icon favorite-nav-link" aria-label="Избранное">
+                <i data-lucide="heart"></i>
+            </a>
+
+            <a href="cart.html" class="header-icon cart-header-icon" aria-label="Корзина">
+                <i data-lucide="shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </a>
+
+        </div>
+
+
+        <!-- Кнопка мобильного меню -->
+        <button class="menu-toggle" aria-label="Открыть меню">
+            <i data-lucide="menu"></i>
+        </button>
+
+    </div>
+
+</header>
+
+<div class="search-panel">
+    <div class="search-panel-content">
+        <div class="search-input-wrapper">
+            <i data-lucide="search"></i>
+            <input
+                type="text"
+                id="siteSearchInput"
+                placeholder="Найти товар или ферму..."
+                autocomplete="off"
+            >
+            <button type="button" class="search-close" aria-label="Закрыть поиск">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <div class="search-results" id="searchResults">
+            <p class="search-hint">Начните вводить название товара или фермы</p>
+        </div>
+    </div>
+</div>
+
+    <!-- ==============================
+     HERO — ГЛАВНЫЙ ЭКРАН
+============================== -->
+
+<main>
+
+<section class="help-hero">
+    <div class="help-hero-content">
+        <span class="section-label">МЫ РЯДОМ</span>
+        <h1>Чем можем <span>помочь?</span></h1>
+        <p>
+            Собрали ответы на вопросы о заказах,
+            доставке, продуктах и работе нашего сервиса.
+        </p>
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="faq-heading">
+        <span class="section-label">ВОПРОСЫ И ОТВЕТЫ</span>
+        <h2>Всё самое важное</h2>
+    </div>
+
+    <div class="faq-group">
+        <h3>Оформление заказа</h3>
+
+        <details class="faq-item">
+            <summary>Как оформить заказ?</summary>
+            <p>
+                Выберите понравившиеся товары в каталоге,
+                добавьте их в корзину и перейдите к оформлению.
+                Заполните контактные данные и выберите удобную дату доставки.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Нужно ли регистрироваться для покупки?</summary>
+            <p>
+                Нет, оформить заказ можно без регистрации.
+                Достаточно указать контактные данные при оформлении.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Можно ли изменить или отменить заказ?</summary>
+            <p>
+                Если вам нужно изменить состав заказа или отменить его,
+                свяжитесь с нами как можно скорее через контакты сервиса.
+            </p>
+        </details>
+    </div>
+
+    <div class="faq-group">
+        <h3>Доставка и оплата</h3>
+
+        <details class="faq-item">
+            <summary>Куда осуществляется доставка?</summary>
+            <p>
+                На данный момент сервис ориентирован на доставку
+                по Москве. Доступность доставки по конкретному адресу
+                можно уточнить при оформлении заказа.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Сколько стоит доставка?</summary>
+            <p>
+                Итоговая стоимость доставки отображается
+                при оформлении заказа до его подтверждения.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Какие способы оплаты доступны?</summary>
+            <p>
+                Доступный способ оплаты можно посмотреть
+                на этапе оформления заказа.
+            </p>
+        </details>
+    </div>
+
+    <div class="faq-group">
+        <h3>Продукты и фермы</h3>
+
+        <details class="faq-item">
+            <summary>Откуда поступают продукты?</summary>
+            <p>
+                Мы знакомим покупателей с небольшими фермерскими
+                хозяйствами и производителями, представленными
+                на нашей площадке.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Как узнать больше о производителе?</summary>
+            <p>
+                Информация о хозяйствах представлена в разделе
+                «Наши фермы». Там можно познакомиться с производителями
+                и узнать, какую продукцию они предлагают.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Всегда ли товары есть в наличии?</summary>
+            <p>
+                Наличие сезонных продуктов может меняться
+                в зависимости от времени года и возможностей хозяйства.
+            </p>
+        </details>
+    </div>
+
+    <div class="faq-group">
+        <h3>Качество продукции</h3>
+
+        <details class="faq-item">
+            <summary>Что делать, если товар оказался ненадлежащего качества?</summary>
+            <p>
+                Свяжитесь с нами, опишите ситуацию и укажите,
+                какой именно товар вызвал вопросы. Мы поможем
+                разобраться с обращением.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Можно ли вернуть продукты?</summary>
+            <p>
+                Условия возврата и рассмотрения обращений зависят
+                от категории товара и действующих правил.
+                Свяжитесь с нами, чтобы получить консультацию.
+            </p>
+        </details>
+    </div>
+</section>
+
+<section class="help-contact">
+    <div class="help-contact-content">
+        <span class="section-label">НЕ НАШЛИ ОТВЕТ?</span>
+        <h2>Мы всегда готовы помочь</h2>
+        <p>
+            Если у вас остались вопросы, свяжитесь с нами.
+            Постараемся разобраться в любой ситуации.
+        </p>
+        <a href="mailto:hello@otsvoih.ru" class="help-contact-button">
+            Написать нам
+            <i data-lucide="arrow-up-right"></i>
+        </a>
+    </div>
+</section>
+</main>
+
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <a href="index.html" class="logo footer-logo">
+                <i data-lucide="sprout"></i>
+                <span>от своих</span>
+            </a>
+
+            <p>
+                Фермерские продукты
+                прямо от тех, кто их производит.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Покупателям</h3>
+            <a href="catalog.html">Каталог</a>
+            <a href="about.html">О сервисе</a>
+            <a href="farms.html">Наши фермы</a>
+            <a href="help.html">Помощь</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Информация</h3>
+            <a href="about.html">О проекте</a>
+            <a href="about.html">Доставка и оплата</a>
+            <a href="help.html">Частые вопросы</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Контакты</h3>
+            <a href="mailto:hello@otsvoih.ru">hello@otsvoih.ru</a>
+            <span>Москва и Московская область</span>
+
+            <div class="footer-socials">
+                <a href="#" aria-label="Telegram">
+                    <i data-lucide="send"></i>
+                </a>
+                <a href="#" aria-label="ВКонтакте">
+                    <i data-lucide="users"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 «От своих». Все права защищены.</span>
+        <a href="#">Политика конфиденциальности</a>
+    </div>
+</footer>
+
+</body>
+</html>

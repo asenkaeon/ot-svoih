@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог продуктов — От своих</title>
+
+    <!-- Шрифт Onest -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Иконки Lucide -->
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+
+    <!-- JavaScript -->
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ШАПКА САЙТА -->
+    <header class="header">
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                <i data-lucide="sprout"></i>
+                <span>от своих</span>
+            </a>
+
+            <nav class="navigation">
+                <a href="catalog.html">Каталог</a>
+                <a href="about.html">О сервисе</a>
+                <a href="farms.html">Наши фермы</a>
+                <a href="help.html">Помощь</a>
+            </nav>
+
+            <div class="header-icons">
+            <a href="#" class="header-icon search-toggle" aria-label="Поиск">
+                <i data-lucide="search"></i>
+            </a>
+
+            <a href="favorites.html" class="header-icon favorite-nav-link" aria-label="Избранное">
+                <i data-lucide="heart"></i>
+            </a>
+
+                
+               <a href="cart.html" class="header-icon cart-link" aria-label="Корзина">
+                   <i data-lucide="shopping-cart"></i>
+                   <span class="cart-count">0</span>
+               </a>
+
+            </div>
+
+            <button class="menu-toggle" aria-label="Открыть меню">
+                <i data-lucide="menu"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <div class="search-panel">
+    <div class="search-panel-content">
+        <div class="search-input-wrapper">
+            <i data-lucide="search"></i>
+            <input
+                type="text"
+                id="siteSearchInput"
+                placeholder="Найти товар или ферму..."
+                autocomplete="off"
+            >
+            <button type="button" class="search-close" aria-label="Закрыть поиск">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <div class="search-results" id="searchResults">
+            <p class="search-hint">Начните вводить название товара или фермы</p>
+        </div>
+    </div>
+</div>
+
+    <!-- ОСНОВНОЕ СОДЕРЖИМОЕ -->
+    
+<main class="catalog-page favorites-page">
+
+    <!-- ЗАГОЛОВОК КАТАЛОГА -->
+    <section class="catalog-heading">
+    <div class="catalog-heading-text">
+        <span class="catalog-label">ВАШИ ЛЮБИМЫЕ ПРОДУКТЫ</span>
+        <h1>Избранное</h1>
+        <p>
+            Здесь собраны продукты, которые вы отметили сердечком.
+            Возвращайтесь к ним в любое время.
+        </p>
+    </div>
+</section>
+
+<!-- СЕТКА ТОВАРОВ -->
+<section class="products-grid">
+
+    <!-- ТОВАР 1 -->
+    <article class="product-card">
+        <div class="product-image">
+            <img src="images/product-tomatoes.jpg" alt="Свежие фермерские томаты">
+            <button class="favorite-button" aria-label="Добавить в избранное">
+                <i data-lucide="heart"></i>
+            </button>
+            <span class="product-badge">Хит</span>
+        </div>
+
+        <div class="product-info">
+            <span class="product-farm">Ферма «Зелёный луг»</span>
+            <h3>Томаты розовые</h3>
+            <p class="product-weight">500 г</p>
+            <div class="product-bottom">
+                <span class="product-price">290 ₽</span>
+                <button class="add-to-cart" aria-label="Добавить в корзину">
+                    <i data-lucide="plus"></i>
+                </button>
+            </div>
+        </div>
+    </article>
+
+    <!-- ТОВАР 2 -->
+    <article class="product-card">
+        <div class="product-image">
+            <img src="images/product-milk.jpg" alt="Фермерское молоко">
+            <button class="favorite-button" aria-label="Добавить в избранное">
+                <i data-lucide="heart"></i>
+            </button>
+        </div>
+
+        <div class="product-info">
+            <span class="product-farm">Ферма «Молочная долина»</span>
+            <h3>Молоко цельное</h3>
+            <p class="product-weight">1 л</p>
+            <div class="product-bottom">
+                <span class="product-price">160 ₽</span>
+                <button class="add-to-cart" aria-label="Добавить в корзину">
+                    <i data-lucide="plus"></i>
+                </button>
+            </div>
+        </div>
+    </article>
+
+    <!-- ТОВАР 3 -->
+    <article class="product-card">
+        <div class="product-image">
+            <img src="images/product-eggs.jpg" alt="Домашние куриные яйца">
+            <button class="favorite-button" aria-label="Добавить в избранное">
+                <i data-lucide="heart"></i>
+            </button>
+        </div>
+
+        <div class="product-info">
+            <span class="product-farm">Ферма «Птичий двор»</span>
+            <h3>Яйца деревенские</h3>
+            <p class="product-weight">10 шт.</p>
+            <div class="product-bottom">
+                <span class="product-price">180 ₽</span>
+                <button class="add-to-cart" aria-label="Добавить в корзину">
+                    <i data-lucide="plus"></i>
+                </button>
+            </div>
+        </div>
+    </article>
+
+    <!-- ТОВАР 4 -->
+    <article class="product-card">
+        <div class="product-image">
+            <img src="images/product-cheese.jpg" alt="Фермерский сыр">
+            <button class="favorite-button" aria-label="Добавить в избранное">
+                <i data-lucide="heart"></i>
+            </button>
+            <span class="product-badge">Новинка</span>
+        </div>
+
+        <div class="product-info">
+            <span class="product-farm">Сыроварня «Свои»</span>
+            <h3>Сыр сливочный</h3>
+            <p class="product-weight">200 г</p>
+            <div class="product-bottom">
+                <span class="product-price">340 ₽</span>
+                <button class="add-to-cart" aria-label="Добавить в корзину">
+                    <i data-lucide="plus"></i>
+                </button>
+            </div>
+        </div>
+    </article>
+
+    <!-- ТОВАР 5 -->
+    <article class="product-card">
+        <div class="product-image">
+            <img src="images/product-apples.jpg" alt="Свежие яблоки">
+            <button class="favorite-button" aria-label="Добавить в избранное">
+                <i data-lucide="heart"></i>
+            </button>
+        </div>
+
+        <div class="product-info">
+            <span class="product-farm">Сад «Яблоневый»</span>
+            <h3>Яблоки сезонные</h3>
+            <p class="product-weight">1 кг</p>
+            <div class="product-bottom">
+                <span class="product-price">210 ₽</span>
+                <button class="add-to-cart" aria-label="Добавить в корзину">
+                    <i data-lucide="plus"></i>
+                </button>
+            </div>
+        </div>
+    </article>
+
+    <!-- ТОВАР 6 -->
+    <article class="product-card">
+        <div class="product-image">
+            <img src="images/product-honey.jpg" alt="Натуральный мёд">
+            <button class="favorite-button" aria-label="Добавить в избранное">
+                <i data-lucide="heart"></i>
+            </button>
+        </div>
+
+        <div class="product-info">
+            <span class="product-farm">Пасека «Медовый край»</span>
+            <h3>Мёд цветочный</h3>
+            <p class="product-weight">500 г</p>
+            <div class="product-bottom">
+                <span class="product-price">450 ₽</span>
+                <button class="add-to-cart" aria-label="Добавить в корзину">
+                    <i data-lucide="plus"></i>
+                </button>
+            </div>
+        </div>
+    </article>
+
+    <!-- ТОВАР 7 -->
+    <article class="product-card">
+        <div class="product-image">
+            <img src="images/product-cucumbers.jpg" alt="Свежие огурцы">
+            <button class="favorite-button" aria-label="Добавить в избранное">
+                <i data-lucide="heart"></i>
+            </button>
+        </div>
+
+        <div class="product-info">
+            <span class="product-farm">Ферма «Зелёный луг»</span>
+            <h3>Огурцы грунтовые</h3>
+            <p class="product-weight">500 г</p>
+            <div class="product-bottom">
+                <span class="product-price">140 ₽</span>
+                <button class="add-to-cart" aria-label="Добавить в корзину">
+                    <i data-lucide="plus"></i>
+                </button>
+            </div>
+        </div>
+    </article>
+
+    <!-- ТОВАР 8 -->
+    <article class="product-card">
+        <div class="product-image">
+            <img src="images/product-bread.jpg" alt="Свежий фермерский хлеб">
+            <button class="favorite-button" aria-label="Добавить в избранное">
+                <i data-lucide="heart"></i>
+            </button>
+            <span class="product-badge">Новинка</span>
+        </div>
+
+        <div class="product-info">
+            <span class="product-farm">Пекарня «Тёплый хлеб»</span>
+            <h3>Хлеб ремесленный</h3>
+            <p class="product-weight">400 г</p>
+            <div class="product-bottom">
+                <span class="product-price">190 ₽</span>
+                <button class="add-to-cart" aria-label="Добавить в корзину">
+                    <i data-lucide="plus"></i>
+                </button>
+            </div>
+        </div>
+    </article>
+
+</section>
+
+<!-- МОДАЛЬНОЕ ОКНО ТОВАРА -->
+<div class="product-modal" id="productModal" aria-hidden="true">
+
+    <div class="product-modal-overlay"></div>
+
+    <div class="product-modal-content" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
+
+        <!-- Кнопка закрытия -->
+        <button class="modal-close" aria-label="Закрыть окно">
+            <i data-lucide="x"></i>
+        </button>
+
+        <div class="modal-product-layout">
+
+            <!-- ФОТОГРАФИЯ -->
+            <div class="modal-product-image">
+                <img src="" alt="" id="modalProductImage">
+            </div>
+
+            <!-- ИНФОРМАЦИЯ -->
+            <div class="modal-product-info">
+
+                <span class="modal-product-category" id="modalProductCategory">
+                    Категория продукта
+                </span>
+
+                <h2 id="modalProductName">Название товара</h2>
+
+                <span class="modal-product-farm" id="modalProductFarm">
+                    Ферма-производитель
+                </span>
+
+                <p class="modal-product-description" id="modalProductDescription">
+                    Подробное описание продукта.
+                </p>
+
+                <!-- ХАРАКТЕРИСТИКИ -->
+                <div class="modal-product-details">
+
+                    <div class="modal-detail-row">
+                        <span>Вес / объём</span>
+                        <span id="modalProductWeight">500 г</span>
+                    </div>
+
+                    <div class="modal-detail-row">
+                        <span>Состав</span>
+                        <span id="modalProductComposition">Натуральный состав</span>
+                    </div>
+
+                    <div class="modal-detail-row">
+                        <span>Хранение</span>
+                        <span id="modalProductStorage">При температуре от +2 до +6 °C</span>
+                    </div>
+
+                    <div class="modal-detail-row">
+                        <span>Срок годности</span>
+                        <span id="modalProductShelfLife">Уточняется</span>
+                    </div>
+
+                </div>
+
+                <!-- ЦЕНА И КОРЗИНА -->
+                <div class="modal-product-purchase">
+
+                    <span class="modal-product-price" id="modalProductPrice">
+                        290 ₽
+                    </span>
+
+                    <div class="modal-cart-control" id="modalCartControl">
+
+                        <button class="modal-quantity-minus" aria-label="Уменьшить количество">
+                            <i data-lucide="minus"></i>
+                        </button>
+
+                        <span class="modal-quantity-value">0</span>
+
+                        <button class="modal-quantity-plus" aria-label="Увеличить количество">
+                            <i data-lucide="plus"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</main>
+
+
+</body>
+</html>

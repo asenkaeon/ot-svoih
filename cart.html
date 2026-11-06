@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Корзина — От своих</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ШАПКА САЙТА -->
+    <!-- ШАПКА САЙТА -->
+    <header class="header">
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                <i data-lucide="sprout"></i>
+                <span>от своих</span>
+            </a>
+
+            <nav class="navigation">
+                <a href="catalog.html">Каталог</a>
+                <a href="about.html">О сервисе</a>
+                <a href="farms.html">Наши фермы</a>
+                <a href="help.html">Помощь</a>
+            </nav>
+
+            <div class="header-icons">
+            <a href="#" class="header-icon search-toggle" aria-label="Поиск">
+                <i data-lucide="search"></i>
+            </a>
+
+            <a href="favorites.html" class="header-icon favorite-nav-link" aria-label="Избранное">
+                <i data-lucide="heart"></i>
+            </a>
+
+                
+               <a href="cart.html" class="header-icon cart-link" aria-label="Корзина">
+                   <i data-lucide="shopping-cart"></i>
+                   <span class="cart-count">0</span>
+               </a>
+
+            </div>
+
+            <button class="menu-toggle" aria-label="Открыть меню">
+                <i data-lucide="menu"></i>
+            </button>
+
+        </div>
+    </header>
+
+    <div class="search-panel">
+    <div class="search-panel-content">
+        <div class="search-input-wrapper">
+            <i data-lucide="search"></i>
+            <input
+                type="text"
+                id="siteSearchInput"
+                placeholder="Найти товар или ферму..."
+                autocomplete="off"
+            >
+            <button type="button" class="search-close" aria-label="Закрыть поиск">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <div class="search-results" id="searchResults">
+            <p class="search-hint">Начните вводить название товара или фермы</p>
+        </div>
+    </div>
+</div>
+
+    <main class="cart-page">
+
+        <!-- ЗАГОЛОВОК -->
+        <section class="cart-heading">
+            <h1>Моя корзина</h1>
+            <span class="cart-page-count">0 товаров</span>
+        </section>
+
+        <!-- ОСНОВНАЯ ОБЛАСТЬ КОРЗИНЫ -->
+        <section class="cart-layout">
+
+            <!-- СПИСОК ТОВАРОВ -->
+            <div class="cart-items" id="cartItems">
+                
+            </div>
+
+            <!-- ИТОГО -->
+            <aside class="cart-summary" id="cartSummary">
+                
+            </aside>
+
+        </section>
+
+        <!-- ПУСТАЯ КОРЗИНА -->
+        <section class="cart-empty" id="cartEmpty">
+            <i data-lucide="shopping-basket"></i>
+            <h2>Ваша корзина пока пуста</h2>
+            <p>Самое время выбрать что-нибудь вкусное от наших фермеров.</p>
+            <a href="catalog.html" class="cart-return-button">
+                Перейти в каталог
+            </a>
+        </section>
+
+
+<!-- ОКНО ОФОРМЛЕНИЯ ЗАКАЗА -->
+<div class="checkout-modal" id="checkoutModal" aria-hidden="true">
+
+    <div class="checkout-overlay"></div>
+
+    <div class="checkout-modal-content">
+
+        <div class="checkout-modal-header">
+            <div>
+                <span class="checkout-label">ПОСЛЕДНИЙ ШАГ</span>
+                <h2>Оформление заказа</h2>
+                <p>Заполните данные, чтобы мы могли доставить ваш заказ.</p>
+            </div>
+
+            <button class="checkout-close" aria-label="Закрыть">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <form id="checkoutForm">
+
+            <div class="checkout-form-group">
+                <label for="customerName">Имя и фамилия</label>
+                <input
+                    type="text"
+                    id="customerName"
+                    name="customerName"
+                    placeholder="Например, Анна Иванова"
+                    required
+                >
+            </div>
+
+<div class="checkout-form-group">
+    <label for="customerPhone">Номер телефона</label>
+    <input
+        type="tel"
+        id="customerPhone"
+        name="customerPhone"
+        placeholder="+7 (___) ___-__-__"
+        inputmode="numeric"
+        autocomplete="tel"
+        maxlength="18"
+        required
+    >
+</div>
+
+
+            <div class="checkout-form-group">
+                <label for="customerAddress">Адрес доставки</label>
+                <input
+                    type="text"
+                    id="customerAddress"
+                    name="customerAddress"
+                    placeholder="Улица, дом, квартира"
+                    required
+                >
+            </div>
+
+            <div class="checkout-form-group">
+    <label>Дата доставки</label>
+
+    <div class="custom-date-picker">
+
+        <button type="button" class="date-picker-button">
+            <span>Выберите дату</span>
+            <i data-lucide="calendar-days"></i>
+        </button>
+
+        <div class="date-picker-calendar">
+
+            <div class="calendar-header">
+                <button type="button" class="calendar-prev">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+
+                <span class="calendar-month-year"></span>
+
+                <button type="button" class="calendar-next">
+                    <i data-lucide="chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="calendar-weekdays">
+                <span>Пн</span>
+                <span>Вт</span>
+                <span>Ср</span>
+                <span>Чт</span>
+                <span>Пт</span>
+                <span>Сб</span>
+                <span>Вс</span>
+            </div>
+
+            <div class="calendar-days"></div>
+
+        </div>
+
+        <input
+            type="hidden"
+            id="deliveryDate"
+            name="deliveryDate"
+        >
+
+    </div>
+</div>
+
+                <div class="checkout-form-group">
+    <label>Время доставки</label>
+
+    <div class="custom-time-select">
+
+        <button type="button" class="time-select-button">
+            <span>Выберите время</span>
+            <i data-lucide="chevron-down"></i>
+        </button>
+
+        <div class="time-select-options">
+
+            <button type="button" data-value="09:00–12:00">
+                09:00–12:00
+            </button>
+
+            <button type="button" data-value="12:00–15:00">
+                12:00–15:00
+            </button>
+
+            <button type="button" data-value="15:00–18:00">
+                15:00–18:00
+            </button>
+
+            <button type="button" data-value="18:00–21:00">
+                18:00–21:00
+            </button>
+        </div>
+        <input type="hidden" id="deliveryTime" name="deliveryTime">
+    </div>
+            </div>
+            <div class="checkout-form-group">
+                <label for="orderComment">Комментарий к заказу</label>
+                <textarea
+                    id="orderComment"
+                    name="orderComment"
+                    placeholder="Например, позвонить перед доставкой"
+                    rows="3"
+                ></textarea>
+            </div>
+
+            <div class="checkout-total">
+                <span>Итого к оплате</span>
+                <strong id="checkoutTotal">0 ₽</strong>
+            </div>
+
+            <button type="submit" class="checkout-submit">
+                Подтвердить заказ
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+
+<!-- УСПЕШНОЕ ОФОРМЛЕНИЕ ЗАКАЗА -->
+<div class="success-modal" id="successModal" aria-hidden="true">
+
+    <div class="success-modal-content">
+
+        <div class="success-icon">
+            <i data-lucide="check"></i>
+        </div>
+
+        <span class="success-label">ЗАКАЗ ОФОРМЛЕН</span>
+
+        <h2>Спасибо за ваш заказ!</h2>
+
+        <p>
+            Мы уже готовим всё самое вкусное от наших фермеров.
+            Скоро свяжемся с вами для подтверждения доставки.
+        </p>
+
+        <div class="success-order-number">
+            <span>Номер вашего заказа</span>
+            <strong id="successOrderNumber">№ 000001</strong>
+        </div>
+
+        <button class="success-return-button" id="successReturnButton">
+            Вернуться в каталог
+        </button>
+
+    </div>
+
+</div>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>От своих — фермерские продукты</title>
+
+    <!-- Подключение шрифта Onest -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Подключение Lucide Icons -->
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+
+    <!-- Подключение JavaScript -->
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ==============================
+     HEADER — ШАПКА САЙТА
+============================== -->
+
+<header class="header">
+
+    <div class="header-container">
+
+        <!-- Логотип -->
+        <a href="index.html" class="logo">
+
+            <i data-lucide="sprout"></i>
+
+            <span>от своих</span>
+
+        </a>
+
+
+        <!-- Навигация -->
+        <nav class="navigation">
+
+    <a href="catalog.html">Каталог</a>
+
+    <a href="about.html">О сервисе</a>
+
+    <a href="farms.html">Наши фермы</a>
+
+    <a href="help.html">Помощь</a>
+
+</nav>
+
+
+        <!-- Иконки -->
+        <div class="header-icons">
+
+            <a href="#" class="header-icon search-toggle" aria-label="Поиск">
+                <i data-lucide="search"></i>
+            </a>
+
+            <a href="favorites.html" class="header-icon favorite-nav-link" aria-label="Избранное">
+                <i data-lucide="heart"></i>
+            </a>
+
+            <a href="cart.html" class="header-icon cart-header-icon" aria-label="Корзина">
+               <i data-lucide="shopping-cart"></i>
+               <span class="cart-count" id="cartCount">0</span>
+            </a>
+
+        </div>
+
+
+        <!-- Кнопка мобильного меню -->
+        <button class="menu-toggle" aria-label="Открыть меню">
+            <i data-lucide="menu"></i>
+        </button>
+
+    </div>
+
+</header>
+
+
+<div class="search-panel">
+    <div class="search-panel-content">
+        <div class="search-input-wrapper">
+            <i data-lucide="search"></i>
+            <input
+                type="text"
+                id="siteSearchInput"
+                placeholder="Найти товар или ферму..."
+                autocomplete="off"
+            >
+            <button type="button" class="search-close" aria-label="Закрыть поиск">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <div class="search-results" id="searchResults">
+            <p class="search-hint">Начните вводить название товара или фермы</p>
+        </div>
+    </div>
+</div>
+
+
+    <!-- ==============================
+     HERO — ГЛАВНЫЙ ЭКРАН
+============================== -->
+
+<main>
+<section class="hero">
+    <div class="hero-image"></div>
+
+    <div class="hero-content">
+        <span class="hero-label">
+            ОТ ФЕРМЕРОВ — С ЛЮБОВЬЮ
+        </span>
+
+        <h1 class="hero-title">
+            Фермерские продукты —
+            <span>прямо от тех, кто их производит</span>
+        </h1>
+
+        <p class="hero-description">
+            Небольшие фермерские хозяйства, прозрачный выбор
+            и доставка по Москве
+        </p>
+
+        <a href="catalog.html" class="hero-button">
+            Перейти в каталог
+            <i data-lucide="arrow-up-right"></i>
+        </a>
+    </div>
+
+    <div class="hero-bottom-note">
+        <span></span>
+        Знаешь что покупаешь. Знаешь у кого
+    </div>
+</section>
+
+<section class="advantages">
+    <div class="advantages-container">
+
+        <div class="advantage-item">
+            <i data-lucide="leaf"></i>
+            <span>Свежие продукты</span>
+        </div>
+
+        <div class="advantage-item">
+            <i data-lucide="sprout"></i>
+            <span>Отборные фермы</span>
+        </div>
+
+        <div class="advantage-item">
+            <i data-lucide="truck"></i>
+            <span>Доставка по Москве</span>
+        </div>
+
+        <div class="advantage-item">
+            <i data-lucide="map-pin"></i>
+            <span>Прозрачное происхождение</span>
+        </div>
+
+    </div>
+</section>
+
+<section class="season">
+
+    <div class="season-image">
+        <img src="images/product-tomatoes.jpg" alt="Свежие фермерские продукты">
+        <span class="season-image-label">СОБРАНО С ЗАБОТОЙ</span>
+    </div>
+
+    <div class="season-content">
+        <span class="season-label">Время свежих продуктов</span>
+
+        <h2 class="season-title">Сейчас сезон</h2>
+
+        <p class="season-description">
+            Самое время попробовать продукты,
+            которые особенно хороши именно сейчас.
+            Свежесть, натуральный вкус и забота
+            небольших фермерских хозяйств.
+        </p>
+
+        <a href="catalog.html" class="season-button">
+            Смотреть сезонные продукты
+            <i data-lucide="arrow-right"></i>
+        </a>
+    </div>
+
+</section>
+
+<section class="farm-week">
+    <div class="farm-week-heading">
+        <div>
+            <span class="farm-week-label">Знакомьтесь с производителями</span>
+            <h2 class="farm-week-title">Ферма недели</h2>
+        </div>
+
+        <a href="farms.html" class="farm-week-link">
+            Все фермы
+            <i data-lucide="arrow-right"></i>
+        </a>
+    </div>
+
+    <div class="farm-week-card">
+        <div class="farm-week-image"></div>
+
+        <div class="farm-week-content">
+            <span class="farm-week-location">
+                <i data-lucide="map-pin"></i>
+                Московская область
+            </span>
+
+            <h3>Ферма «Название фермы»</h3>
+
+            <p>
+                Небольшое семейное хозяйство, где заботятся
+                о качестве продуктов и бережном производстве.
+            </p>
+
+            <a href="farms.html" class="farm-week-button">
+                Познакомиться с фермой
+                <i data-lucide="arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="season-promo">
+    <div class="season-promo-content">
+        <span class="season-promo-label">От природы — к вашему столу</span>
+
+        <h2 class="season-promo-title">
+            Вкус сезона<br>
+            в каждом продукте
+        </h2>
+
+        <p class="season-promo-description">
+            Откройте для себя свежие продукты
+            от небольших фермерских хозяйств.
+        </p>
+
+        <a href="catalog.html" class="season-promo-button">
+            Выбрать продукты
+            <i data-lucide="arrow-right"></i>
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <a href="index.html" class="logo footer-logo">
+                <i data-lucide="sprout"></i>
+                <span>от своих</span>
+            </a>
+
+            <p>
+                Фермерские продукты
+                прямо от тех, кто их производит.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Покупателям</h3>
+            <a href="catalog.html">Каталог</a>
+            <a href="about.html">О сервисе</a>
+            <a href="farms.html">Наши фермы</a>
+            <a href="help.html">Помощь</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Информация</h3>
+            <a href="about.html">О проекте</a>
+            <a href="about.html">Доставка и оплата</a>
+            <a href="help.html">Частые вопросы</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Контакты</h3>
+            <a href="mailto:hello@otsvoih.ru">hello@otsvoih.ru</a>
+            <span>Москва и Московская область</span>
+
+            <div class="footer-socials">
+                <a href="#" aria-label="Telegram">
+                    <i data-lucide="send"></i>
+                </a>
+                <a href="#" aria-label="ВКонтакте">
+                    <i data-lucide="users"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 «От своих». Все права защищены.</span>
+        <a href="#">Политика конфиденциальности</a>
+    </div>
+</footer>
+
+</body>
+</html>

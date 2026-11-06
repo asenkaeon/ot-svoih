@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>О сервисе | От своих</title>
+
+    <!-- Подключение шрифта Onest -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Подключение Lucide Icons -->
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+
+    <!-- Подключение JavaScript -->
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ==============================
+     HEADER — ШАПКА САЙТА
+============================== -->
+
+<header class="header">
+
+    <div class="header-container">
+
+        <!-- Логотип -->
+        <a href="index.html" class="logo">
+
+            <i data-lucide="sprout"></i>
+
+            <span>от своих</span>
+
+        </a>
+
+
+        <!-- Навигация -->
+        <nav class="navigation">
+
+    <a href="catalog.html">Каталог</a>
+
+    <a href="about.html">О сервисе</a>
+
+    <a href="farms.html">Наши фермы</a>
+
+    <a href="help.html">Помощь</a>
+
+</nav>
+
+
+        <!-- Иконки -->
+        <div class="header-icons">
+
+            <a href="#" class="header-icon search-toggle" aria-label="Поиск">
+                <i data-lucide="search"></i>
+            </a>
+
+            <a href="favorites.html" class="header-icon favorite-nav-link" aria-label="Избранное">
+                <i data-lucide="heart"></i>
+            </a>
+
+            <a href="cart.html" class="header-icon cart-header-icon" aria-label="Корзина">
+                <i data-lucide="shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </a>
+
+        </div>
+
+
+        <!-- Кнопка мобильного меню -->
+        <button class="menu-toggle" aria-label="Открыть меню">
+            <i data-lucide="menu"></i>
+        </button>
+
+    </div>
+
+</header>
+
+<div class="search-panel">
+    <div class="search-panel-content">
+        <div class="search-input-wrapper">
+            <i data-lucide="search"></i>
+            <input
+                type="text"
+                id="siteSearchInput"
+                placeholder="Найти товар или ферму..."
+                autocomplete="off"
+            >
+            <button type="button" class="search-close" aria-label="Закрыть поиск">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <div class="search-results" id="searchResults">
+            <p class="search-hint">Начните вводить название товара или фермы</p>
+        </div>
+    </div>
+</div>
+
+    <!-- ==============================
+     HERO — ГЛАВНЫЙ ЭКРАН
+============================== -->
+
+<main class="about-page">
+
+<section class="about-hero">
+    <div class="about-hero-content">
+        <span class="about-label">О НАШЕМ СЕРВИСЕ</span>
+        <h1>От своих — значит, <span>по-настоящему</span></h1>
+        <p>
+            Мы соединяем небольшие фермерские хозяйства
+            и тех, кто ценит натуральные продукты,
+            честное происхождение и настоящий вкус.
+        </p>
+    </div>
+</section>
+
+<section class="about-intro">
+    <div class="about-intro-content">
+        <span class="section-label">НАША ИДЕЯ</span>
+        <h2>Знаешь, что покупаешь. Знаешь, у кого.</h2>
+        <p>
+            «От своих» — это онлайн-площадка, которая
+            помогает находить продукты от небольших
+            фермерских хозяйств. Мы хотим сделать покупку
+            фермерских продуктов простой и понятной:
+            без лишних посредников, с открытой информацией
+            о производителях и вниманием к качеству.
+        </p>
+    </div>
+</section>
+
+<section class="about-principles">
+    <span class="section-label">НА ЧЁМ ВСЁ ДЕРЖИТСЯ</span>
+    <h2>Близость, качество и доверие</h2>
+
+    <div class="about-principles-grid">
+        <article class="about-principle">
+            <i data-lucide="sprout"></i>
+            <h3>От небольших хозяйств</h3>
+            <p>Знакомим покупателей с фермерами и их продукцией.</p>
+        </article>
+
+        <article class="about-principle">
+            <i data-lucide="badge-check"></i>
+            <h3>Прозрачный выбор</h3>
+            <p>Рассказываем о происхождении продуктов и производителях.</p>
+        </article>
+
+        <article class="about-principle">
+            <i data-lucide="heart-handshake"></i>
+            <h3>С заботой о покупателе</h3>
+            <p>Помогаем выбирать продукты, которым хочется доверять.</p>
+        </article>
+    </div>
+</section>
+
+<section class="about-delivery" id="delivery">
+    <div class="about-delivery-content">
+        <span class="section-label">ДОСТАВКА И ОПЛАТА</span>
+        <h2>От фермы до вашего дома</h2>
+        <p>
+            Мы стремимся сделать заказ фермерских продуктов
+            таким же удобным, как обычную онлайн-покупку.
+            Выбирайте товары, оформляйте заказ и получайте
+            продукты с доставкой по Москве.
+        </p>
+
+        <div class="delivery-info-grid">
+            <div class="delivery-info">
+                <i data-lucide="truck"></i>
+                <h3>Доставка</h3>
+                <p>Доставляем заказы по Москве. Условия и доступные даты можно посмотреть при оформлении заказа.</p>
+            </div>
+
+            <div class="delivery-info">
+                <i data-lucide="credit-card"></i>
+                <h3>Оплата</h3>
+                <p>Способ оплаты и итоговая стоимость заказа отображаются на этапе оформления.</p>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <a href="index.html" class="logo footer-logo">
+                <i data-lucide="sprout"></i>
+                <span>от своих</span>
+            </a>
+
+            <p>
+                Фермерские продукты
+                прямо от тех, кто их производит.
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Покупателям</h3>
+            <a href="catalog.html">Каталог</a>
+            <a href="about.html">О сервисе</a>
+            <a href="farms.html">Наши фермы</a>
+            <a href="help.html">Помощь</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Информация</h3>
+            <a href="about.html">О проекте</a>
+            <a href="about.html">Доставка и оплата</a>
+            <a href="help.html">Частые вопросы</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Контакты</h3>
+            <a href="mailto:hello@otsvoih.ru">hello@otsvoih.ru</a>
+            <span>Москва и Московская область</span>
+
+            <div class="footer-socials">
+                <a href="#" aria-label="Telegram">
+                    <i data-lucide="send"></i>
+                </a>
+                <a href="#" aria-label="ВКонтакте">
+                    <i data-lucide="users"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 «От своих». Все права защищены.</span>
+        <a href="#">Политика конфиденциальности</a>
+    </div>
+</footer>
+
+</body>
+</html>
